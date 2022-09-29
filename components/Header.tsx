@@ -21,10 +21,11 @@ function Header() {
     }, [top]);
 
     const navigation = [
-        { name: "Work", href: "#work" },
-        // { name: "Services", href: "#services" },
-        // { name: "About", href: "#about-us" },
-        // { name: "Contact", href: "#" },
+        { name: "About", href: "#" },
+        { name: "Resumee", href: "#" },
+        { name: "Works", href: "#" },
+        { name: "Blogs", href: "#" },
+        { name: "Contact", href: "#" },
     ];
     return (
         <header
@@ -89,18 +90,15 @@ function Header() {
                     >
                         <div className="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
                             <div className="px-5 pt-4 flex items-center justify-between">
-                                <Link
-                                    href="/"
-                                    className="flex items-center justify-center gap-3 w-8 h-8"
-                                >
-                                    <a className="w-8 h-8">
+                                <Link href="/" className=" w-8 h-8">
+                                    <a className=" grid grid-cols-2 items-center gap-2 ">
                                         <Image
-                                            // className="w-8 h-8"
                                             width={32}
                                             height={32}
                                             src={Logo}
                                             alt="Cold Brew Logo"
                                         />
+
                                         <p>Rafael Gomes</p>
                                     </a>
                                 </Link>

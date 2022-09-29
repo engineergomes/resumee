@@ -1,10 +1,22 @@
+import { faCode, faGraduationCap } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCode } from "@fortawesome/free-solid-svg-icons";
+import type { NextPage } from "next";
+import Head from "next/head";
+import AboutMe from "../components/AboutMe";
 
-function WhatIDo() {
+import Header from "../components/Header";
+import WhatIDo from "../components/WhatIDo";
+
+function Education() {
     return (
-        <section className="px-4">
-            <h1 className="text-center text-3xl font-semibold">What I do</h1>
+        <section className="flex flex-col px-4 gap-4">
+            <div className="flex items-center space-x-2">
+                <FontAwesomeIcon className="h-8 w-8" icon={faGraduationCap} />
+                <h1 className="text-center text-3xl font-semibold">
+                    Education
+                </h1>
+            </div>
+
             <div className="grid grid-cols-1 gap-3 grid-rows-4">
                 <div className="grid grid-cols-[1fr,7fr] bg-green-200 px-4 py-5 gap-x-4 rounded-xl">
                     <FontAwesomeIcon icon={faCode} />
@@ -33,4 +45,4 @@ function WhatIDo() {
     );
 }
 
-export default WhatIDo;
+export default Education;
