@@ -21,15 +21,15 @@ function Header() {
     }, [top]);
 
     const navigation = [
-        { name: "About", href: "#" },
-        { name: "Resumee", href: "#" },
+        { name: "About", href: "/" },
+        { name: "Resumee", href: "/resumee" },
         { name: "Works", href: "#" },
         { name: "Blogs", href: "#" },
         { name: "Contact", href: "#" },
     ];
     return (
         <header
-            className={`fixed top-0 w-full z-30 md:bg-opacity-90 transition duration-300 ease-in-out ${
+            className={`fixed top-0 w-full z-50 md:bg-opacity-90 transition duration-300 ease-in-out ${
                 !top && "bg-white backdrop-blur-sm shadow-lg"
             }`}
         >
@@ -63,13 +63,11 @@ function Header() {
                         </div>
                         <div className="hidden md:flex md:ml-10 md:pr-0 md:space-x-8 md:items-center md:justify-end md:w-full">
                             {navigation.map((item) => (
-                                <a
-                                    key={item.name}
-                                    className="border-b border-transparent hover:border-black"
-                                    href={item.href}
-                                >
-                                    {item.name}
-                                </a>
+                                <Link key={item.name} href={item.href}>
+                                    <a className="border-b border-transparent hover:border-black">
+                                        {item.name}
+                                    </a>
+                                </Link>
                             ))}
                         </div>
                     </nav>
@@ -119,7 +117,9 @@ function Header() {
                                         key={item.name}
                                         className=" text-center py-4 rounded-md text-base font-bold  hover:text-gray-900 hover:bg-gray-500 w-full"
                                     >
-                                        <a href={item.href}>{item.name}</a>
+                                        <Link href={item.href}>
+                                            <a>{item.name}</a>
+                                        </Link>
                                     </Popover.Button>
                                 ))}
                             </div>

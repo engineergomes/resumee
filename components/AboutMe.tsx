@@ -7,6 +7,7 @@ import {
     faTwitter,
     faWhatsapp,
     faTelegram,
+    faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 
 import {
@@ -20,9 +21,10 @@ import {
 function AboutMe() {
     return (
         <>
-            <main className=" min-h-screen mt-24">
-                <div className="grid grid-cols-12 container mx-auto px-4 sm:px-6 ">
-                    <div className="flex flex-col col-span-12 sm:col-span-4 gap-6">
+            <main className="relative ">
+                <div className="absolute bg-white h-[85%] w-[calc(100vw-2rem)] ml-4 md:w-[calc(100%+1rem)] z-0 top-0 mt-[160px] rounded-3xl md:ml-12"></div>
+                <div className="flex justify-center z-10 md:ml-24">
+                    <div className="flex flex-col  gap-6 z-30">
                         <div className="flex flex-col w-60 h-60 items-center mx-auto ">
                             <Image
                                 className="rounded-3xl "
@@ -47,6 +49,12 @@ function AboutMe() {
                             </a>
                             <a className="bg-[#F3F6F6] h-10 w-10 rounded-2xl p-2">
                                 <FontAwesomeIcon
+                                    className="text-[#161B22]"
+                                    icon={faGithub}
+                                />
+                            </a>
+                            <a className="bg-[#F3F6F6] h-10 w-10 rounded-2xl p-2">
+                                <FontAwesomeIcon
                                     className="text-[#1C9CEA]"
                                     icon={faTwitter}
                                 />
@@ -64,7 +72,7 @@ function AboutMe() {
                                 />
                             </a>
                         </div>
-                        <div className="flex flex-col items-center justify-center px-3 py-2 bg-[#F3F6F6] rounded-2xl">
+                        <div className="flex flex-col items-center justify-center px-3 py-2 bg-[#F3F6F6] rounded-2xl w-min mx-auto">
                             <div className="grid grid-cols-[1fr,5fr] grid-rows-2 py-3 gap-x-3 border-b border-gray-300">
                                 <a className="bg-white w-10 rounded-lg p-2 row-span-2 h-full flex items-center justify-center">
                                     <FontAwesomeIcon
