@@ -21,10 +21,11 @@ import {
 function AboutMe() {
     return (
         <>
-            <main className="relative ">
-                <div className="absolute bg-white h-[85%] w-[calc(100vw-2rem)] ml-4 md:w-[calc(100%+1rem)] z-0 top-0 mt-[160px] rounded-3xl md:ml-12"></div>
-                <div className="flex justify-center z-10 md:ml-24">
-                    <div className="flex flex-col  gap-6 z-30">
+            <main className="relative col-start-2 col-end-4">
+                <div className="">
+                    <div className=" justify-center z-30 grid gap-y-6">
+                        <div className=" bg-white z-[-1] rounded-3xl p-5 row-start-1 row-end-3 absolute md:mt-24 md:w-full md:h-[95%]"></div>
+
                         <div className="flex flex-col w-60 h-60 items-center mx-auto ">
                             <Image
                                 className="rounded-3xl "
