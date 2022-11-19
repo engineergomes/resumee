@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import Image from "next/image";
 import Logo from "../public/cold-brew-logo.svg";
 import List from "../public/list.svg";
@@ -10,6 +11,7 @@ import { Popover, Transition } from "@headlessui/react";
 
 function Header() {
     const [top, setTop] = useState(true);
+    const router = useRouter();
 
     // detect whether user has scrolled the page down by 10px
     useEffect(() => {
@@ -38,7 +40,7 @@ function Header() {
                     <nav className="relative flex items-center justify-between sm:h-14 lg:justify-start">
                         <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
                             <div className="flex items-center justify-between w-full md:w-auto">
-                                <Link href="/">
+                                <Link href="/" replace>
                                     <a className="flex items-center justify-center gap-3">
                                         <Image
                                             width={32}
@@ -63,8 +65,14 @@ function Header() {
                         </div>
                         <div className="hidden md:flex md:ml-10 md:pr-0 md:space-x-8 md:items-center md:justify-end md:w-full">
                             {navigation.map((item) => (
-                                <Link key={item.name} href={item.href}>
-                                    <a className="border-b border-transparent hover:border-black">
+                                <Link key={item.name} href={item.href} replace>
+                                    <a
+                                        className={`border-b border-transparent ${
+                                            router.pathname === item.href
+                                                ? "border-black"
+                                                : ""
+                                        }`}
+                                    >
                                         {item.name}
                                     </a>
                                 </Link>

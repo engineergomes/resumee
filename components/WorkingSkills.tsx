@@ -2,7 +2,7 @@ import { faLaptopCode } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { NextPage } from "next";
 import Head from "next/head";
-import AboutMe from "../components/AboutMe";
+import AboutMe from "./Sidebar";
 
 import Header from "../components/Header";
 import WhatIDo from "../components/WhatIDo";
