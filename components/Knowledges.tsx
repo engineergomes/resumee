@@ -18,25 +18,37 @@ function Knowledges() {
             </div>
             <div className="flex flex-wrap gap-3">
                 <div className="bg-yellow-200 px-4 py-2 rounded-lg">
-                    <p className="text-center">Next.js</p>
+                    <p className="text-center">React</p>
                 </div>
                 <div className="bg-yellow-200 px-4 py-2 rounded-lg">
-                    <p className="text-center">Next.js</p>
+                    <p className="text-center">Next</p>
                 </div>
                 <div className="bg-yellow-200 px-4 py-2 rounded-lg">
-                    <p className="text-center">Next.jsaaaaaaaaa</p>
+                    <p className="text-center">TypeScript</p>
                 </div>
                 <div className="bg-yellow-200 px-4 py-2 rounded-lg">
-                    <p className="text-center">Next.js</p>
+                    <p className="text-center">JavaScript</p>
                 </div>
                 <div className="bg-yellow-200 px-4 py-2 rounded-lg">
-                    <p className="text-center">Next.js</p>
+                    <p className="text-center">Tailwind</p>
                 </div>
                 <div className="bg-yellow-200 px-4 py-2 rounded-lg">
-                    <p className="text-center">Next.js</p>
+                    <p className="text-center">Node</p>
                 </div>
                 <div className="bg-yellow-200 px-4 py-2 rounded-lg">
-                    <p className="text-center">Next.js</p>
+                    <p className="text-center">MongoDB</p>
+                </div>
+                <div className="bg-yellow-200 px-4 py-2 rounded-lg">
+                    <p className="text-center">Prisma</p>
+                </div>
+                <div className="bg-yellow-200 px-4 py-2 rounded-lg">
+                    <p className="text-center">Python</p>
+                </div>
+                <div className="bg-yellow-200 px-4 py-2 rounded-lg">
+                    <p className="text-center">C</p>
+                </div>
+                <div className="bg-yellow-200 px-4 py-2 rounded-lg">
+                    <p className="text-center">C++</p>
                 </div>
             </div>
         </section>

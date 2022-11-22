@@ -12,15 +12,13 @@ function Education() {
                 </h1>
             </div>
 
-            <ul className="grid grid-cols-1 gap-3 grid-rows-4">
+            <ul className="grid grid-cols-1 gap-3 ">
                 <ListItem
-                    title={"Frontend"}
-                    text={"React, Next"}
+                    title={"Electrical and Electronics Engineering"}
+                    when="Mar 2014 - Mar 2020"
+                    text={"Universidade Federal de Santa Catarina"}
                     icon={faCode}
                 />
-                <ListItem title={"Backend"} text={"Node"} icon={faCode} />
-                <ListItem title={"Blockchain"} text={"Solana"} icon={faCode} />
-                <ListItem title={"Automation"} text={"Python"} icon={faCode} />
             </ul>
         </section>
     );

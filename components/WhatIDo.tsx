@@ -24,8 +24,8 @@ function WhatIDo() {
                     </p>
 
                     <p>
-                        I'm always open to conversations and opportunities, feel
-                        free to get in touch!
+                        I&quot;m always open to conversations and opportunities,
+                        feel free to get in touch!
                     </p>
                 </div>
             </div>

@@ -1,5 +1,6 @@
 import { faCode, faBriefcase } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Disclosure, Transition } from "@headlessui/react";
 import ListItem from "./ListItem";
 
 function Experience() {
@@ -15,6 +16,7 @@ function Experience() {
             <ul className="grid grid-cols-1 gap-3 grid-rows-4">
                 <ListItem
                     title={"Coldbrew - Fullstack Engineer - TreeShake"}
+                    when="Apr 2022 - Present · 8 mosApr 2022 - Present · 8 mos"
                     text={
                         <p>
                             TreeShake is a platform for managing NFT DAOs at
@@ -40,6 +42,7 @@ function Experience() {
                 />
                 <ListItem
                     title={"Coldbrew - Frontend Developer - Degen Legends"}
+                    when="Oct 2022 - Nov 2022 · 2 mosOct 2022 - Nov 2022 · 2 mos"
                     text={
                         <p>
                             Degen Legends, known formerly as 3D Gamers Guild,
@@ -57,6 +60,7 @@ function Experience() {
                 />
                 <ListItem
                     title={"Freelancer - Blockchain Engineer - Solana"}
+                    when="Dec 2021 - Present · 1 yr"
                     text={
                         <p>
                             Solana is a decentralized blockchain built to enable
@@ -71,7 +75,152 @@ function Experience() {
                     usedSkills={["React.js", "Next.js", "Metaplex Protocol"]}
                     icon={faCode}
                 />
-                <ListItem title={"Automation"} text={"Python"} icon={faCode} />
+                <ListItem
+                    title={
+                        "Software Engineer | Community Outreach - Foton Tech"
+                    }
+                    when="Jan 2021 - Dec 2021 · 1 yr"
+                    text={
+                        <p>
+                            Foton is a community for Brazilian Software
+                            Engineers. We connect our members to Silicon Valley
+                            startups.
+                        </p>
+                    }
+                    performedActivitiesa={[
+                        "Actively prospecting new partnerships for web/mobile development endeavors within our community (web scraping with python)",
+                        "built an automation (Python and Selenium) to approach potential partners on twitter with a response rate of approximately 20%",
+                        "Frontend developer",
+                    ]}
+                    usedSkills={["React.js", "Next.js", "Python"]}
+                    icon={faCode}
+                />
+
+                {/* Initial hidden exp start */}
+                <Disclosure>
+                    {({ open }) => (
+                        <div className="grid grid-cols-1">
+                            <Disclosure.Button
+                                className={`py-5 ${
+                                    open ? "row-start-2" : "row-start-1"
+                                }`}
+                            >
+                                {open ? "Hide" : "Vieaw all"}
+                            </Disclosure.Button>
+                            <Transition
+                                enter="transition duration-100 ease-out"
+                                enterFrom="transform scale-95 opacity-0"
+                                enterTo="transform scale-100 opacity-100"
+                                leave="transition duration-75 ease-out"
+                                leaveFrom="transform scale-100 opacity-100"
+                                leaveTo="transform scale-95 opacity-0"
+                            >
+                                <Disclosure.Panel className="grid grid-cols-1 gap-3 grid-rows-4">
+                                    <ListItem
+                                        title={
+                                            "ISR Engenharia  - Engineering Manager"
+                                        }
+                                        when="Mar 2020 - Sep 2020 · 7 mos"
+                                        text={
+                                            <p>
+                                                ISR is an electrical engineering
+                                                consulting firm whose main
+                                                activities are electrical
+                                                installations and energy
+                                                efficiency studies.
+                                            </p>
+                                        }
+                                        performedActivitiesa={[
+                                            "Construction of an application to study energy efficiency using Google Apps Script and google sheets",
+                                            "Energy efficiency studies using Python",
+                                            "Photovoltaic projects with AutoCAD",
+                                        ]}
+                                        usedSkills={[
+                                            "Python",
+                                            " MongoDB",
+                                            "Google Apps Script",
+                                            "VBA",
+                                        ]}
+                                        icon={faCode}
+                                    />
+                                    <ListItem
+                                        title={
+                                            "CELESC Distribuição - Engineering Intern"
+                                        }
+                                        when="Mar 2018 - Mar 2019 · 1 yr 1 mo"
+                                        text={
+                                            <p>
+                                                Centrais Elétricas de Santa
+                                                Catarina S.A. - Celesc, is a
+                                                mixed-capital company that has
+                                                been operating since 1955 in the
+                                                areas of energy generation,
+                                                transmission and distribution.
+                                                During this period, it
+                                                consolidated itself as one of
+                                                the largest companies in the
+                                                Brazilian electric sector, with
+                                                national and international
+                                                recognition for the quality of
+                                                its services and for its actions
+                                                in the technical, economic,
+                                                environmental and social fields.
+                                            </p>
+                                        }
+                                        performedActivitiesa={[
+                                            "Developed the entire front of their homepage using React and Tailwind",
+                                        ]}
+                                        usedSkills={["React.js"]}
+                                        icon={faCode}
+                                    />
+                                    <ListItem
+                                        title={
+                                            "Freelancer - Blockchain Engineer - Solana"
+                                        }
+                                        when="Dec 2021 - Present · 1 yr"
+                                        text={
+                                            <p>
+                                                Solana is a decentralized
+                                                blockchain built to enable
+                                                scalable, user-friendly apps for
+                                                the world.
+                                            </p>
+                                        }
+                                        performedActivitiesa={[
+                                            "Treatment of data using Python for calculation of electrical losses and composition of investments for medium and low voltage electrical networks",
+                                            "Developed an internal tool using VBA for generating technical documentation for connection studies of generators to the electrical distribution network, drastically reducing the time spent by all engineers in the sector to write documents",
+                                            "Distributed generation analysis and calculations of power flows with the use of computational tools (INTERPLAN and SICOTEN)",
+                                        ]}
+                                        usedSkills={["Python", "VBA"]}
+                                        icon={faCode}
+                                    />
+                                    <ListItem
+                                        title={
+                                            "Electrical Engineer - Vento Sul | UFSC Solar Boat Team"
+                                        }
+                                        when="Jan 2021 - Dec 2021 · 11 mos"
+                                        text={
+                                            <p>
+                                                UFSC Vento Sul Team is a
+                                                Volunteer project for solar
+                                                powered boat competitions. Team
+                                                5x champion of Desafio Solar
+                                                Brasil and 7th place in Dong
+                                                Solar 2012 (worldwide).
+                                            </p>
+                                        }
+                                        performedActivitiesa={[
+                                            "Worked on a telemetry system, using arduino programmed in C and radio waves to carry out communication between the devices on the boat on the high seas and the team on land in real time, making decision making faster",
+                                            "Worked on the development of the Battery Management System (BMS), using 2 arduinos nano programmed in C and communicating with each other, for the load management and security system of a battery bank composed of 6 LiFePO4 cells",
+                                        ]}
+                                        usedSkills={["C", "C++", "Arduino"]}
+                                        icon={faCode}
+                                    />
+                                </Disclosure.Panel>
+                            </Transition>
+                        </div>
+                    )}
+                </Disclosure>
             </ul>
         </section>
     );

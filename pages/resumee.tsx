@@ -22,7 +22,7 @@ const Resumee: NextPage = () => {
 
             <Layout>
                 <div className=" min-h-screen col-span-12 sm:col-span-7 sm:mt-24 overflow-y-scroll md:col-start-5 md:col-end-12 scrollbar-hide">
-                    <div className=" bg-white rounded-3xl px-6 py-12 ">
+                    <div className="flex flex-col gap-12 bg-white rounded-3xl px-6 py-12 ">
                         <h1 className="text-center text-3xl font-semibold">
                             Resumee
                         </h1>
