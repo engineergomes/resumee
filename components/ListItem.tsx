@@ -1,13 +1,22 @@
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { ReactNode } from "react";
 
 interface listItemProps {
     title: string;
-    text: string;
+    text: ReactNode;
     icon: IconDefinition;
+    performedActivitiesa?: string[];
+    usedSkills?: string[];
 }
 
-function ListItem({ title, text, icon }: listItemProps) {
+function ListItem({
+    title,
+    text,
+    icon,
+    performedActivitiesa,
+    usedSkills,
+}: listItemProps) {
     return (
         <li className="grid grid-cols-[1fr,12fr]  bg-green-200 px-8 py-5 gap-x-4 gap-y-1 rounded-xl">
             <div className="flex itens-center justify-start">
@@ -17,9 +26,31 @@ function ListItem({ title, text, icon }: listItemProps) {
             <div className="flex itens-center h-full ">
                 <h2 className="font-semibold text-xl ">{title}</h2>
             </div>
-            <p className="col-start-2 text-justify text-[#44566C] font-medium">
-                {text}
-            </p>
+            <div className="flex flex-col gap-4 col-start-2 text-justify text-[#44566C] font-medium">
+                <p className="">{text}</p>
+                <div className="flex flex-col gap-4">
+                    {performedActivitiesa ? <p>Performed activities:</p> : ""}
+                    <ul className="list-disc ml-10">
+                        {performedActivitiesa?.map((item, index) => (
+                            <li key={index}>{item}</li>
+                        ))}
+                    </ul>
+                </div>
+
+                <div className="flex flex-col gap-4">
+                    {usedSkills ? <p>Skills:</p> : ""}
+                    <ul className="flex gap-3">
+                        {usedSkills?.map((item, index) => (
+                            <li
+                                key={index}
+                                className="bg-yellow-200 px-4 py-2 rounded-lg"
+                            >
+                                {item}
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            </div>
         </li>
     );
 }
