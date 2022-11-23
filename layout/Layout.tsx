@@ -11,7 +11,9 @@ function Layout({ children }: layoutProps) {
         <>
             <Header />
             <Sidebar />
-            {children}
+            <div className="min-h-screen col-span-12  mt-12 lg:mt-24 overflow-y-scroll lg:col-start-11 2xl:col-start-10 scrollbar-hide px-5 lg:px-0">
+                {children}
+            </div>
         </>
     );
 }

@@ -58,12 +58,14 @@ function Sidebar() {
             text: "+55 71 99700 1211",
             icon: faMobileScreenButton,
             style: "text-[#E93B81]",
+            href: "tel:+5571997001211",
         },
         {
             title: "Email",
             text: "eng.rsgomes@gmail.com",
             icon: faEnvelopeOpenText,
             style: "text-[#6AB5B9]",
+            href: "mailto:eng.rsgomes@gmail.com",
         },
         {
             title: "Location",
@@ -80,11 +82,11 @@ function Sidebar() {
     ];
     return (
         <>
-            <div className="min-h-screen col-span-12  md:h-screen  md:fixed  md:top-24 md:left-[8.33vw] md:w-[16.66vw]">
-                <main className="relative col-start-2 col-end-4">
+            <div className="min-h-screen col-span-12 mt-24 lg:mt-0  lg:h-screen  lg:fixed  lg:top-24 lg:left-[8.33vw] lg:w-[16.66vw]">
+                <main className="relative col-start-2 col-end-4 ">
                     <div className="">
-                        <div className=" justify-center z-30 grid gap-y-6">
-                            <div className=" bg-white z-[-1] rounded-3xl p-5 row-start-1 row-end-3 absolute md:mt-24 md:w-full md:h-[95%]"></div>
+                        <div className=" justify-center z-30 grid gap-y-6 min-w-[312px] 2xl:min-w-[416px]">
+                            <div className=" bg-white z-[-1] rounded-3xl p-5 row-start-1 row-end-3 absolute lg:mt-24 lg:w-full lg:h-[95%] min-w-[312px] 2xl:min-w-[416px]"></div>
 
                             <div className="flex flex-col w-60 h-60 items-center mx-auto drop-shadow-xl">
                                 <Image
@@ -106,6 +108,9 @@ function Sidebar() {
                                     <a
                                         key={index}
                                         className="bg-[#F3F6F6] h-10 w-10 rounded-2xl p-2"
+                                        href={item.href}
+                                        target="_blank"
+                                        rel="noreferrer"
                                     >
                                         <FontAwesomeIcon
                                             className={item.style}
@@ -114,25 +119,26 @@ function Sidebar() {
                                     </a>
                                 ))}
                             </div>
-                            <div className="flex flex-col items-center justify-center px-3 py-2 bg-[#F3F6F6] rounded-2xl w-min mx-auto">
+                            <div className="flex flex-col items-center justify-center px-3 py-2 bg-[#F3F6F6] rounded-2xl w-min mx-auto 2xl:px-10">
                                 {personalInfo.map((item, index) => (
-                                    <div
+                                    <a
                                         key={index}
-                                        className="grid grid-cols-[1fr,5fr] grid-rows-2 py-3 gap-x-3 border-b border-gray-300"
+                                        className="grid grid-cols-[1fr,5fr] grid-rows-2 py-3 gap-x-3 border-b border-gray-300 last:border-0"
+                                        href={item.href}
                                     >
-                                        <a className="bg-white w-10 rounded-lg p-2 row-span-2 h-full flex items-center justify-center">
+                                        <div className="bg-white w-10 rounded-lg p-2 row-span-2 h-full flex items-center justify-center">
                                             <FontAwesomeIcon
                                                 className={`w-5 h-5 ${item.style}`}
                                                 icon={item.icon}
                                             />
-                                        </a>
+                                        </div>
                                         <p className="text-gray-600 text-sm self-end">
                                             {item.title}
                                         </p>
                                         <p className="self-start">
                                             {item.text}
                                         </p>
-                                    </div>
+                                    </a>
                                 ))}
                             </div>
 

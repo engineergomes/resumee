@@ -20,15 +20,15 @@ function ListItem({
     when,
 }: listItemProps) {
     return (
-        <li className="grid grid-cols-[1fr,12fr]  bg-green-200 px-8 py-5 gap-x-4 gap-y-1 rounded-xl">
+        <li className="grid grid-cols-[1fr,12fr]  bg-green-200 px-8 py-5 gap-x-4 gap-y-1 rounded-xl sm:w-[calc(100%-4rem)] justify-self-center">
             <div className="flex itens-center justify-start">
-                <FontAwesomeIcon icon={icon} className="lg:h-8 lg:w-8" />
+                <FontAwesomeIcon icon={icon} className="h-8 w-8" />
             </div>
 
             <div className="flex itens-center h-full ">
-                <h2 className="font-semibold text-xl ">{title}</h2>
+                <h2 className="font-semibold sm:text-xl ">{title}</h2>
             </div>
-            <div className="flex flex-col gap-4 col-start-2 text-justify text-[#44566C] font-medium">
+            <div className="flex flex-col gap-4 col-span-2 xl:col-start-2 text-justify text-[#44566C] font-medium">
                 <div>{when}</div>
                 <div>{text}</div>
 
@@ -37,7 +37,7 @@ function ListItem({
                     <div className="flex flex-col gap-4">
                         <p>Performed activities:</p>
 
-                        <ul className="list-disc ml-10">
+                        <ul className="list-disc ml-5 lg:ml-10">
                             {performedActivitiesa?.map((item, index) => (
                                 <li key={index}>{item}</li>
                             ))}
@@ -51,7 +51,7 @@ function ListItem({
                     <div className="flex flex-col gap-4">
                         <p>Skills:</p>
 
-                        <ul className="flex gap-3">
+                        <ul className="flex gap-3 flex-wrap">
                             {usedSkills?.map((item, index) => (
                                 <li
                                     key={index}

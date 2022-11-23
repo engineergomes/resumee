@@ -13,10 +13,10 @@ function Experience() {
                 </h1>
             </div>
 
-            <ul className="grid grid-cols-1 gap-3 grid-rows-4">
+            <ul className="grid grid-cols-1 gap-3 ">
                 <ListItem
                     title={"Coldbrew - Fullstack Engineer - TreeShake"}
-                    when="Apr 2022 - Present · 8 mosApr 2022 - Present · 8 mos"
+                    when="Apr 2022 - Present · 8 mos"
                     text={
                         <p>
                             TreeShake is a platform for managing NFT DAOs at
@@ -42,7 +42,7 @@ function Experience() {
                 />
                 <ListItem
                     title={"Coldbrew - Frontend Developer - Degen Legends"}
-                    when="Oct 2022 - Nov 2022 · 2 mosOct 2022 - Nov 2022 · 2 mos"
+                    when="Oct 2022 - Nov 2022 · 2 mos"
                     text={
                         <p>
                             Degen Legends, known formerly as 3D Gamers Guild,
@@ -115,7 +115,7 @@ function Experience() {
                                 leaveFrom="transform scale-100 opacity-100"
                                 leaveTo="transform scale-95 opacity-0"
                             >
-                                <Disclosure.Panel className="grid grid-cols-1 gap-3 grid-rows-4">
+                                <Disclosure.Panel className="grid grid-cols-1 gap-3">
                                     <ListItem
                                         title={
                                             "ISR Engenharia  - Engineering Manager"
