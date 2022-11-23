@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Dispatch, SetStateAction } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Image from "next/image";
@@ -7,9 +7,14 @@ import List from "../public/list.svg";
 import XIcon from "../public/x.svg";
 
 import { Fragment } from "react";
-import { Popover, Transition } from "@headlessui/react";
+import { Popover, Switch, Transition } from "@headlessui/react";
 
-function Header() {
+interface headerProps {
+    darkMode: boolean;
+    setDarkMode: Dispatch<SetStateAction<boolean>>;
+}
+
+function Header({ darkMode, setDarkMode }: headerProps) {
     const [top, setTop] = useState(true);
     const router = useRouter();
 
@@ -36,8 +41,8 @@ function Header() {
             }`}
         >
             <Popover>
-                <div className="relative pt-6  lg:px-16 sm:pt-0 max-w-6xl mx-auto px-5 sm:px-6">
-                    <nav className="relative flex items-center justify-between sm:h-14 lg:justify-start">
+                <div className="relative pt-6  lg:px-16 sm:pt-0 max-w-[1400px] mx-auto px-5 sm:px-6">
+                    <nav className="relative flex items-center justify-between sm:h-14 lg:justify-start ">
                         <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
                             <div className="flex items-center justify-between w-full md:w-auto">
                                 <Link href="/" replace>
@@ -57,19 +62,21 @@ function Header() {
                                             width={32}
                                             height={32}
                                             src={List}
-                                            alt="Cold Brew Logo"
+                                            alt="Menu"
                                         />
                                     </Popover.Button>
                                 </div>
                             </div>
                         </div>
+
+                        {/* desktop nav*/}
                         <div className="hidden md:flex md:ml-10 md:pr-0 md:space-x-8 md:items-center md:justify-end md:w-full">
                             {navigation.map((item) => (
-                                <Link key={item.name} href={item.href} replace>
+                                <Link key={item.name} href={item.href}>
                                     <a
-                                        className={`border-b border-transparent ${
+                                        className={`border-b-2 border-transparent ${
                                             router.pathname === item.href
-                                                ? "border-black"
+                                                ? "border-[#8257E6]"
                                                 : ""
                                         }`}
                                     >
@@ -77,10 +84,33 @@ function Header() {
                                     </a>
                                 </Link>
                             ))}
+
+                            <div className="flex flex-col gap-3">
+                                <Switch
+                                    checked={darkMode}
+                                    onChange={setDarkMode}
+                                    className={` relative inline-flex h-6 w-11 items-center rounded-full border border-[#454545] disabled:opacity-30`}
+                                >
+                                    <span className="sr-only">
+                                        Change theme
+                                    </span>
+                                    <span
+                                        className={`${
+                                            darkMode
+                                                ? "translate-x-1 bg-[#8257E5] hover:bg-[#996DFF] active:bg-[#a88ee6]"
+                                                : "translate-x-6 bg-[#8B8B8B] active:bg-[#9B9B9B] hover:bg-[#7B7B7B]"
+                                        } inline-block h-4 w-4 transform rounded-full  transition `}
+                                    />
+                                </Switch>
+                                <p className="text-xs text-center">
+                                    {darkMode ? "Dark" : "Light"}
+                                </p>
+                            </div>
                         </div>
                     </nav>
                 </div>
 
+                {/* Mobile dropdown*/}
                 <Transition
                     as={Fragment}
                     enter="duration-150 ease-out"

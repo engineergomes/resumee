@@ -82,11 +82,11 @@ function Sidebar() {
     ];
     return (
         <>
-            <div className="min-h-screen col-span-12 mt-24 lg:mt-0  lg:h-screen  lg:fixed  lg:top-24 lg:left-[8.33vw] lg:w-[16.66vw]">
+            <div className="min-h-screen col-span-12 mt-24 lg:mt-0  lg:h-screen  lg:fixed  lg:top-24 lg:left-[8.33vw]  lg:w-[16.66vw]">
                 <main className="relative col-start-2 col-end-4 ">
                     <div className="">
                         <div className=" justify-center z-30 grid gap-y-6 min-w-[312px] 2xl:min-w-[416px]">
-                            <div className=" bg-white z-[-1] rounded-3xl p-5 row-start-1 row-end-3 absolute lg:mt-24 lg:w-full lg:h-[95%] min-w-[312px] 2xl:min-w-[416px]"></div>
+                            <div className="hidden lg:flex bg-[#F4F4F5] dark:bg-[#18181B] z-[-1] rounded-3xl p-5  absolute lg:mt-24 lg:w-full lg:h-[95%] min-w-[312px] 2xl:min-w-[416px]"></div>
 
                             <div className="flex flex-col w-60 h-60 items-center mx-auto drop-shadow-xl">
                                 <Image
@@ -96,10 +96,10 @@ function Sidebar() {
                                 />
                             </div>
                             <div className="flex flex-col gap-2 text-center">
-                                <h1 className="text-2xl font-semibold">
+                                <h1 className="text-2xl font-semibold dark:text-[#F4F4F5]">
                                     Rafael Gomes
                                 </h1>
-                                <h2 className="text-[#7b7b7b]">
+                                <h2 className="text-[#71717A] dark:text-[#A1A1AA]">
                                     Front End Engineer
                                 </h2>
                             </div>
@@ -107,44 +107,44 @@ function Sidebar() {
                                 {socialLinks.map((item, index) => (
                                     <a
                                         key={index}
-                                        className="bg-[#F3F6F6] h-10 w-10 rounded-2xl p-2"
+                                        className="bg-[#E4E4E7] hover:bg-[#D4D4D8] dark:bg-[#27272A]  dark:hover:bg-[#3F3F46] h-12 w-12 rounded-2xl p-3 text-[#8257E5] hover:text-[#996DFF]"
                                         href={item.href}
                                         target="_blank"
                                         rel="noreferrer"
                                     >
                                         <FontAwesomeIcon
-                                            className={item.style}
+                                            className={""}
                                             icon={item.icon}
                                         />
                                     </a>
                                 ))}
                             </div>
-                            <div className="flex flex-col items-center justify-center px-3 py-2 bg-[#F3F6F6] rounded-2xl w-min mx-auto 2xl:px-10">
+                            <div className="flex flex-col items-center justify-center px-3 py-2 bg-[#E4E4E7] dark:bg-[#27272A] rounded-2xl w-min mx-auto 2xl:px-10">
                                 {personalInfo.map((item, index) => (
                                     <a
                                         key={index}
                                         className="grid grid-cols-[1fr,5fr] grid-rows-2 py-3 gap-x-3 border-b border-gray-300 last:border-0"
                                         href={item.href}
                                     >
-                                        <div className="bg-white w-10 rounded-lg p-2 row-span-2 h-full flex items-center justify-center">
+                                        <div className="w-10 rounded-lg p-2 row-span-2 h-full flex items-center justify-center">
                                             <FontAwesomeIcon
-                                                className={`w-5 h-5 ${item.style}`}
+                                                className={`w-5 h-5 text-[#8257E5]`}
                                                 icon={item.icon}
                                             />
                                         </div>
-                                        <p className="text-gray-600 text-sm self-end">
+                                        <p className="dark:text-[#F4F4F5] text-sm self-end">
                                             {item.title}
                                         </p>
-                                        <p className="self-start">
+                                        <p className="self-start text-[#71717A] dark:text-[#A1A1AA]">
                                             {item.text}
                                         </p>
                                     </a>
                                 ))}
                             </div>
 
-                            <button className="flex items-center justify-center px-10 py-4 gap-3 font-semibold text-white bg-gradient-to-r from-blue-500 to-teal-400 rounded-full mx-auto">
+                            <button className="flex items-center justify-center px-10 py-4 gap-3 font-semibold bg-[#8257E5] hover:bg-[#996DFF] text-white rounded-full mx-auto ">
                                 <FontAwesomeIcon
-                                    className="text-white w-5 h-5 "
+                                    className="text-white w-5 h-5"
                                     icon={faCloudArrowDown}
                                 />
                                 <p>Download CV</p>

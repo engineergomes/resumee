@@ -14,7 +14,7 @@ import Layout from "../layout/Layout";
 
 const Resumee: NextPage = () => {
     return (
-        <div className="grid grid-cols-12 lg:grid-cols-[repeat(24,minmax(0,1fr))] bg-blue-200 mx-auto relative pb-12">
+        <div className="grid grid-cols-12 lg:grid-cols-[repeat(24,minmax(0,1fr))] mx-auto relative pb-12">
             <Head>
                 <title>Rafael Gomes - Resumee</title>
                 <link rel="icon" href="/favicon.ico" />
