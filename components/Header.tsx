@@ -46,7 +46,7 @@ function Header({ darkMode, setDarkMode }: headerProps) {
                         <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
                             <div className="flex items-center justify-between w-full md:w-auto">
                                 <Link href="/" replace>
-                                    <a className="flex items-center justify-center gap-3">
+                                    <button className="flex items-center justify-center gap-3">
                                         <Image
                                             width={32}
                                             height={32}
@@ -54,7 +54,7 @@ function Header({ darkMode, setDarkMode }: headerProps) {
                                             alt="Cold Brew Logo"
                                         />
                                         <p>Rafael </p>
-                                    </a>
+                                    </button>
                                 </Link>
                                 <div className="-mr-2 flex items-center md:hidden">
                                     <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center  hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset ">
@@ -73,7 +73,7 @@ function Header({ darkMode, setDarkMode }: headerProps) {
                         <div className="hidden md:flex md:ml-10 md:pr-0 md:space-x-8 md:items-center md:justify-end md:w-full">
                             {navigation.map((item) => (
                                 <Link key={item.name} href={item.href}>
-                                    <a
+                                    <button
                                         className={`border-b-2 border-transparent ${
                                             router.pathname === item.href
                                                 ? "border-[#8257E6]"
@@ -81,14 +81,16 @@ function Header({ darkMode, setDarkMode }: headerProps) {
                                         }`}
                                     >
                                         {item.name}
-                                    </a>
+                                    </button>
                                 </Link>
                             ))}
 
                             <div className="flex flex-col gap-3">
                                 <Switch
                                     checked={darkMode}
-                                    onChange={setDarkMode}
+                                    onChange={() => {
+                                        setDarkMode(!darkMode);
+                                    }}
                                     className={` relative inline-flex h-6 w-11 items-center rounded-full border border-[#454545] disabled:opacity-30`}
                                 >
                                     <span className="sr-only">

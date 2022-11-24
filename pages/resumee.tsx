@@ -21,7 +21,7 @@ const Resumee: NextPage = () => {
             </Head>
 
             <Layout>
-                <div className="flex flex-col gap-12 bg-white rounded-3xl px-6 py-12 ">
+                <div className="flex flex-col gap-12 bg-[#F4F4F5] dark:bg-[#18181B] rounded-3xl px-6 py-12 ">
                     <h1 className="text-center text-3xl font-semibold">
                         Resumee
                     </h1>

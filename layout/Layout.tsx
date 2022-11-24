@@ -1,4 +1,4 @@
-import { ReactElement, useState } from "react";
+import { ReactElement, useEffect, useRef, useState } from "react";
 import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
 
@@ -7,14 +7,21 @@ interface layoutProps {
 }
 
 function Layout({ children }: layoutProps) {
-    const [darkMode, setDarkMode] = useState(true);
-    const html = document.querySelector("html");
+    const [darkMode, setDarkMode] = useState(false);
 
-    if (darkMode) {
-        html?.classList.add("dark");
-    } else {
-        html?.classList.remove("dark");
-    }
+    useEffect(() => {
+        // setDarkMode(localStorage.mode);
+        const html = document.querySelector("html");
+        if (darkMode) {
+            html?.classList.add("dark");
+            console.log("BB");
+        } else {
+            html?.classList.remove("dark");
+            console.log("AA");
+        }
+        console.log(darkMode);
+        console.log("Local storage: ", localStorage.mode);
+    }, [darkMode]);
 
     return (
         <>

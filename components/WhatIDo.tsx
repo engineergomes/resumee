@@ -8,7 +8,7 @@ function WhatIDo() {
                 <h1 className="text-center text-3xl font-bold mb-6 ">
                     About me
                 </h1>
-                <div className="flex flex-col  gap-3  self-center">
+                <div className="flex flex-col  gap-3  self-center text-[#71717A] dark:text-[#A1A1AA]">
                     <p>
                         Master student in electrical engineering, working as a
                         Software Engineer!

@@ -55,7 +55,7 @@ function ListItem({
                             {usedSkills?.map((item, index) => (
                                 <li
                                     key={index}
-                                    className="bg-yellow-200 px-4 py-2 rounded-lg"
+                                    className="bg-[#8257E5] hover:bg-[#996DFF] text-white px-4 py-2 rounded-lg"
                                 >
                                     {item}
                                 </li>

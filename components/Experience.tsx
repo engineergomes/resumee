@@ -7,7 +7,10 @@ function Experience() {
     return (
         <section className="flex flex-col px-4 gap-4">
             <div className="flex items-center space-x-2">
-                <FontAwesomeIcon className="h-8 w-8" icon={faBriefcase} />
+                <FontAwesomeIcon
+                    className="h-8 w-8 text-[#8257E5]"
+                    icon={faBriefcase}
+                />
                 <h1 className="text-center text-3xl font-semibold">
                     Experience
                 </h1>
