@@ -170,14 +170,11 @@ function Header({ darkMode, setDarkMode }: headerProps) {
                     leaveFrom="opacity-100 scale-100"
                     leaveTo="opacity-0 scale-95"
                 >
-                    <Popover.Panel
-                        focus
-                        className="absolute z-10 -top-4 inset-x-0 transition transform origin-top-right md:hidden"
-                    >
+                    <Popover.Panel className="absolute z-10 -top-4 inset-x-0 transition transform origin-top-right md:hidden">
                         {({ close }) => (
                             <div className="rounded-lg shadow-md bg-[#F4F4F5] dark:bg-[#18181B] overflow-hidden">
                                 <div className="px-5 pt-4 flex items-center justify-between">
-                                    <Link href="/" className=" w-8 h-8">
+                                    <Link href="/" className=" w-8 h-8 ring-0">
                                         <a className="flex items-center gap-2 ">
                                             <Image
                                                 className="self-start justify-self-start"
@@ -213,7 +210,7 @@ function Header({ darkMode, setDarkMode }: headerProps) {
                                             </Switch>
                                         </div>
 
-                                        <Popover.Button className="rounded-md p-2 inline-flex items-center justify-center border border-transparent hover:border-[#8257E5] focus:outline-none focus:ring-2 focus:ring-inset ring-black">
+                                        <Popover.Button className="rounded-md p-2 inline-flex items-center justify-center border border-transparent hover:border-[#8257E5]  ring-black">
                                             <Image
                                                 width={32}
                                                 height={32}
