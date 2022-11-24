@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import engGomes from "../public/engGomes.jpeg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -80,6 +79,10 @@ function Sidebar() {
             style: "text-[#C17CEB]",
         },
     ];
+
+    const downloadUrl =
+        "https://drive.google.com/uc?export=download&id=1wA_9TWAydKPVOGW1BYj77UHUe2vwY4xv";
+
     return (
         <>
             <div className="min-h-screen col-span-12 mt-24 lg:mt-0  lg:h-screen  lg:fixed  lg:top-[7.5rem] lg:left-[8.33vw]  lg:w-[16.66vw]">
@@ -142,13 +145,16 @@ function Sidebar() {
                                 ))}
                             </div>
 
-                            <button className="flex items-center justify-center px-10 py-4 gap-3 font-semibold bg-[#8257E5] hover:bg-[#996DFF] text-white rounded-full mx-auto ">
+                            <a
+                                href={downloadUrl}
+                                className="flex items-center justify-center px-10 py-4 gap-3 font-semibold bg-[#8257E5] hover:bg-[#996DFF] text-white rounded-full mx-auto "
+                            >
                                 <FontAwesomeIcon
                                     className="text-white w-5 h-5"
                                     icon={faCloudArrowDown}
                                 />
-                                <p>Download CV</p>
-                            </button>
+                                Download CV
+                            </a>
                         </div>
                     </div>
                 </main>
