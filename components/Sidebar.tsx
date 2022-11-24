@@ -82,7 +82,7 @@ function Sidebar() {
     ];
     return (
         <>
-            <div className="min-h-screen col-span-12 mt-24 lg:mt-0  lg:h-screen  lg:fixed  lg:top-24 lg:left-[8.33vw]  lg:w-[16.66vw]">
+            <div className="min-h-screen col-span-12 mt-24 lg:mt-0  lg:h-screen  lg:fixed  lg:top-[7.5rem] lg:left-[8.33vw]  lg:w-[16.66vw]">
                 <main className="relative col-start-2 col-end-4 ">
                     <div className="">
                         <div className=" justify-center z-30 grid gap-y-6 min-w-[312px] 2xl:min-w-[416px]">

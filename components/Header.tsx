@@ -32,18 +32,19 @@ function Header({ darkMode, setDarkMode }: headerProps) {
         { name: "About", href: "/" },
         { name: "Resumee", href: "/resumee" },
         { name: "Works", href: "/works" },
-        { name: "Blog", href: "#" },
-        { name: "Contact", href: "#" },
+        { name: "Blog", href: "#", disabled: true },
+        { name: "Contact", href: "#", disabled: true },
     ];
     return (
-        <header
-            className={`fixed top-0 w-full z-50 md:bg-opacity-90 transition duration-300 ease-in-out ${
-                !top && "bg-white backdrop-blur-sm shadow-lg"
-            }`}
-        >
+        <header className={`fixed top-4 w-full `}>
             <Popover>
-                <div className="relative pt-6  lg:px-16 sm:pt-0 max-w-[1400px] mx-auto px-5 sm:px-6">
-                    <nav className="relative flex items-center justify-between sm:h-14 lg:justify-start ">
+                <div
+                    className={`relative pt-6 lg:px-16 sm:pt-0 max-w-[1400px] mx-auto px-5 sm:px-6 z-50 md:bg-opacity-90 transition duration-300 ease-in-out border dark:border-[#F4F4F5] border-[#27272A] rounded-full ${
+                        !top &&
+                        "bg-white dark:bg-black backdrop-blur-sm shadow-lg"
+                    }`}
+                >
+                    <nav className="relative flex items-center justify-between  lg:justify-start ">
                         <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
                             <div className="flex items-center justify-between w-full md:w-auto">
                                 <Link href="/" replace>
@@ -74,15 +75,16 @@ function Header({ darkMode, setDarkMode }: headerProps) {
                         <div className="hidden md:flex md:ml-10 md:pr-0 md:space-x-8 md:items-center md:justify-end md:w-full">
                             {navigation.map((item) => (
                                 <Link key={item.name} href={item.href}>
-                                    <a
-                                        className={`border-b-2 border-transparent ${
+                                    <button
+                                        className={`disabled:opacity-50 sm:h-20  border-spacing-40 hover:border-[#8257E6] border-b-[5px] ${
                                             router.pathname === item.href
-                                                ? "border-[#8257E6]"
-                                                : ""
+                                                ? "border-[#8257E6] border-b-[3px]"
+                                                : "border-transparent border-b-[3px]"
                                         }`}
+                                        disabled={item.disabled}
                                     >
                                         {item.name}
-                                    </a>
+                                    </button>
                                 </Link>
                             ))}
 
@@ -101,7 +103,7 @@ function Header({ darkMode, setDarkMode }: headerProps) {
                                         className={`${
                                             darkMode
                                                 ? "translate-x-1 bg-[#8257E5] hover:bg-[#996DFF] active:bg-[#a88ee6]"
-                                                : "translate-x-6 bg-[#8B8B8B] active:bg-[#9B9B9B] hover:bg-[#7B7B7B]"
+                                                : "translate-x-6 bg-[#8257E5] hover:bg-[#996DFF] active:bg-[#a88ee6]"
                                         } inline-block h-4 w-4 transform rounded-full  transition `}
                                     />
                                 </Switch>

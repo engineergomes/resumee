@@ -16,7 +16,10 @@ const Resumee: NextPage = () => {
             <div className="flex flex-col gap-12 bg-[#F4F4F5] dark:bg-[#18181B] rounded-3xl px-6 py-12 ">
                 <h1 className="text-center text-3xl font-semibold">Works</h1>
                 https://degenlegends.io/ <br /> https://treeshake.xyz <br />{" "}
-                https://www.fotumengenharia.com.br/
+                https://www.fotumengenharia.com.br/ <br />{" "}
+                https://solvillage.vercel.app/ (this candy machine and RPC node
+                is deactivated. youre able to connect your wallet, but you cant
+                mint)
             </div>
         </>
     );
