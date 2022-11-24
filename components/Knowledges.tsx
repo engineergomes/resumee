@@ -27,7 +27,7 @@ function Knowledges() {
                     Knowloges
                 </h1>
             </div>
-            <div className="flex flex-wrap px-8 py-5  gap-3 rounded-xl sm:w-[calc(100%-4rem)] justify-self-center">
+            <div className="flex flex-wrap lg:px-8 py-5  gap-3 rounded-xl sm:w-[calc(100%-4rem)] justify-self-center">
                 {knowloges.map((item, index) => (
                     <Skill key={index}>{item}</Skill>
                 ))}

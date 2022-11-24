@@ -10,7 +10,7 @@ const Home: NextPage = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <div className="lg:bg-[#F4F4F5] dark:lg:bg-[#18181B] rounded-3xl px-6 py-12 ">
+            <div className="lg:bg-[#F4F4F5] dark:lg:bg-[#18181B] rounded-3xl lg:px-6 lg:py-12 ">
                 <WhatIDo />
             </div>
         </>

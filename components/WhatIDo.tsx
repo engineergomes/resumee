@@ -33,7 +33,7 @@ function WhatIDo() {
                 <h1 className="text-center text-3xl font-semibold mb-6">
                     What I do
                 </h1>
-                <ul className="grid grid-cols-1 gap-3 grid-rows-4">
+                <ul className="grid grid-cols-1 gap-3 ">
                     <ListItem
                         title="Frontend"
                         text="I can build your next web app using React or Next.js.

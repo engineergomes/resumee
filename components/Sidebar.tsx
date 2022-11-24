@@ -107,7 +107,7 @@ function Sidebar() {
                                 {socialLinks.map((item, index) => (
                                     <a
                                         key={index}
-                                        className="bg-[#E4E4E7] hover:bg-[#D4D4D8] dark:bg-[#27272A]  dark:hover:bg-[#3F3F46] h-12 w-12 rounded-2xl p-3 text-[#8257E5] hover:text-[#996DFF]"
+                                        className="bg-[#E4E4E7] hover:bg-[#D4D4D8] dark:bg-[#27272A]  dark:hover:bg-[#3F3F46] h-12 w-12 rounded-lg p-3 text-[#8257E5] hover:text-[#996DFF] hover:ring-2 hover:ring-[#8257E5] ring-offset-4 ring-offset-[#F4F4F5] dark:ring-offset-[#18181B]"
                                         href={item.href}
                                         target="_blank"
                                         rel="noreferrer"

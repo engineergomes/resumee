@@ -23,7 +23,7 @@ function Layout({ children }: layoutProps) {
             <div className="grid grid-cols-12 lg:grid-cols-[repeat(24,minmax(0,1fr))] mx-auto relative pb-12">
                 <Header darkMode={darkMode} setDarkMode={setDarkMode} />
                 <Sidebar />
-                <div className="min-h-screen col-span-12 mt-12 overflow-y-scroll lg:col-start-11  col-start-5 px-5 lg:px-0 lg:mt-36 scrollbar-hide">
+                <div className="min-h-screen col-span-12 mt-12 overflow-y-scroll lg:col-start-11   px-5 lg:px-0 lg:mt-36 scrollbar-hide">
                     {children}
                 </div>
             </div>

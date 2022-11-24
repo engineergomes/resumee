@@ -19,7 +19,7 @@ function WorkingSkills() {
                     Working Skills
                 </h1>
             </div>
-            <div className="flex flex-col px-8 py-5  gap-y-4 rounded-xl sm:w-[calc(100%-4rem)] justify-self-center">
+            <div className="flex flex-col lg:px-8 py-5  gap-y-4 rounded-xl sm:w-[calc(100%-4rem)] justify-self-center">
                 <div className="flex flex-col">
                     <div className="flex justify-between">
                         <h2 className="font-medium">TypeScript</h2>
