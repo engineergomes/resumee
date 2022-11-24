@@ -9,17 +9,14 @@ const Resumee: NextPage = () => {
     return (
         <>
             <Head>
-                <title>Rafael Gomes - Resumee</title>
+                <title>Rafael Gomes - Works</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
             <div className="flex flex-col gap-12 bg-[#F4F4F5] dark:bg-[#18181B] rounded-3xl px-6 py-12 ">
-                <h1 className="text-center text-3xl font-semibold">Resumee</h1>
-                <Experience />
-                <Education />
-
-                <WorkingSkills />
-                <Knowledges />
+                <h1 className="text-center text-3xl font-semibold">Works</h1>
+                https://degenlegends.io/ <br /> https://treeshake.xyz <br />{" "}
+                https://www.fotumengenharia.com.br/
             </div>
         </>
     );

@@ -1,6 +1,7 @@
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ReactNode } from "react";
+import Skill from "./Skill";
 
 interface listItemProps {
     title: string;
@@ -53,11 +54,8 @@ function ListItem({
 
                         <ul className="flex gap-3 flex-wrap">
                             {usedSkills?.map((item, index) => (
-                                <li
-                                    key={index}
-                                    className="bg-[#8257E5] hover:bg-[#996DFF] text-white px-4 py-2 rounded-lg"
-                                >
-                                    {item}
+                                <li key={index}>
+                                    <Skill>{item}</Skill>
                                 </li>
                             ))}
                         </ul>

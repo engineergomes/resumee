@@ -108,7 +108,7 @@ function Experience() {
                                     open ? "row-start-2" : "row-start-1"
                                 }`}
                             >
-                                {open ? "Hide" : "Vieaw all"}
+                                {open ? "Hide" : "View all "}
                             </Disclosure.Button>
                             <Transition
                                 enter="transition duration-100 ease-out"
@@ -176,27 +176,7 @@ function Experience() {
                                         usedSkills={["React.js"]}
                                         icon={faCode}
                                     />
-                                    <ListItem
-                                        title={
-                                            "Freelancer - Blockchain Engineer - Solana"
-                                        }
-                                        when="Dec 2021 - Present · 1 yr"
-                                        text={
-                                            <p>
-                                                Solana is a decentralized
-                                                blockchain built to enable
-                                                scalable, user-friendly apps for
-                                                the world.
-                                            </p>
-                                        }
-                                        performedActivitiesa={[
-                                            "Treatment of data using Python for calculation of electrical losses and composition of investments for medium and low voltage electrical networks",
-                                            "Developed an internal tool using VBA for generating technical documentation for connection studies of generators to the electrical distribution network, drastically reducing the time spent by all engineers in the sector to write documents",
-                                            "Distributed generation analysis and calculations of power flows with the use of computational tools (INTERPLAN and SICOTEN)",
-                                        ]}
-                                        usedSkills={["Python", "VBA"]}
-                                        icon={faCode}
-                                    />
+
                                     <ListItem
                                         title={
                                             "Electrical Engineer - Vento Sul | UFSC Solar Boat Team"

@@ -1,5 +1,6 @@
 import { faBrain } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Skill from "./Skill";
 
 function Knowledges() {
     const knowloges = [
@@ -26,14 +27,9 @@ function Knowledges() {
                     Knowloges
                 </h1>
             </div>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap px-8 py-5  gap-3 rounded-xl sm:w-[calc(100%-4rem)] justify-self-center">
                 {knowloges.map((item, index) => (
-                    <div
-                        key={index}
-                        className="bg-[#8257E5] hover:bg-[#996DFF] text-white px-4 py-2 rounded-lg"
-                    >
-                        <p className="text-center">{item}</p>
-                    </div>
+                    <Skill key={index}>{item}</Skill>
                 ))}
             </div>
         </section>
