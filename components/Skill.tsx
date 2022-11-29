@@ -2,13 +2,13 @@ import React, { ReactNode } from "react";
 
 interface skillProps {
     children?: ReactNode;
-    key?: React.Key;
+    index?: number;
 }
 
-function Skill({ children, key }: skillProps) {
+function Skill({ children, index }: skillProps) {
     return (
         <div
-            key={key}
+            key={index}
             className="bg-[#8257E5] hover:bg-[#996DFF] text-white px-4 py-2 rounded-lg"
         >
             <p className="text-center">{children}</p>

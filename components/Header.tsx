@@ -98,7 +98,7 @@ function Header({ darkMode, setDarkMode }: headerProps) {
                                             src={darkMode ? LogoDark : Logo}
                                             alt="Cold Brew Logo"
                                         />
-                                        <p className="text-lg lg:text-2xl">
+                                        <p className="text-lg lg:text-2xl dark:text-white text-black">
                                             Rafael{" "}
                                         </p>
                                     </a>
